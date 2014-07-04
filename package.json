@@ -1,0 +1,15 @@
+{
+	"main":         "index.html",
+	"name":         "Twitch App",
+	"webkit": {
+    	"plugin": true
+  	},
+    "window": {
+      "height":     600,
+      "width":      350,
+      "show":       true,
+	  "toolbar": 	false,
+	  "frame":		false
+
+    }
+}

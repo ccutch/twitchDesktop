@@ -1,0 +1,9 @@
+.listArea{
+	overflow-y: scroll;
+	position: absolute;
+	top: 10px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 6;
+}

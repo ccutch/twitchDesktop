@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html ng-app>
+
+<head>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  	<script src="./stream.js"></script>
+
+
+	<link rel="stylesheet" href="./assets/global.css" />
+    <link rel="stylesheet" href="./assets/stream.css" />
+</head>
+
+<body ng-controller="streamCtrl" style="-webkit-app-region: drag;">
+
+    <ng-include src="'./partials/header.html'">
+    </ng-include>
+
+	<div class="videoArea">
+		<object type="application/x-shockwave-flash"
+				style="height: calc(100% - 2px);width: calc(100% - 2px);margin: 1px;"
+		        id="live_embed_player_flash"
+		        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{stream}}"
+		        bgcolor="#000000">
+		  <param  name="allowFullScreen"
+		          value="true" />
+		  <param  name="allowScriptAccess"
+		          value="always" />
+		  <param  name="allowNetworking"
+		          value="all" />
+		  <param  name="movie"
+		          value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+		  <param  name="flashvars"
+		          value="hostname=www.twitch.tv&channel={{stream}}&auto_play=true" />
+		</object>
+	</div>
+</body>
+
+</html>

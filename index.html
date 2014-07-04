@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+
+<html ng-app="router">
+
+<head>
+  <title>Untitled</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-route.js"></script>
+	<script src="./assets/main.js"></script>
+	<script src="./assets/stream.js"></script>
+	<script src="./assets/router.js"></script>
+	<link rel="stylesheet" href="./assets/global.css" />
+	<link rel="stylesheet" href="./assets/main.css" />
+	<link rel="stylesheet" href="./assets/stream.css" />
+</head>
+
+<body style="-webkit-app-region: drag">
+    <ng-include src="'./partials/header.html'">
+    </ng-include>
+	<ng-view></ng-view>
+
+</body>
+</html>

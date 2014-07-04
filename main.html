@@ -1,0 +1,13 @@
+<ul ng-controller="mainCtrl" style="-webkit-app-region: no-drag;" class="listArea">
+	<li ng-repeat="game in games">
+		<img src="{{game.game.logo.medium}}" alt="" />
+		<img src="{{game.game.box.medium}}" alt="" />
+		<a href="#" ng-click="selectGame(game.game.name)">{{game.game.name}}</a>
+		 |||| viewers:{{game.viewers}}
+	</li>
+	<li ng-repeat="stream in streams">
+		<img src="{{stream.preview.medium}}" alt="" />
+		<img src="{{stream.channel.logo}}" alt="" />
+		<a href="" ng-click="openStream(stream.channel.name)">{{stream.channel.display_name}}</a>
+	</li>
+</ul>
