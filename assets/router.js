@@ -2,7 +2,11 @@ var router = angular.module("router", ['ngRoute']);
 
 router.config(function($routeProvider, $locationProvider) {
   $routeProvider
-   .when('/', {
+  .when('/', {
+    templateUrl: 'main.html',
+    controller: 'mainCtrl'
+  })
+  .when('/games', {
     templateUrl: 'main.html',
     controller: 'mainCtrl'
   })
@@ -10,4 +14,5 @@ router.config(function($routeProvider, $locationProvider) {
     templateUrl: 'stream.html',
     controller: 'streamCtrl'
   });
- });
+});
+

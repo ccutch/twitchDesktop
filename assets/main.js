@@ -2,7 +2,9 @@
         var gui = require('nw.gui');
 		var request = require('request');
         window.console.log(gui.App);
-		function mainCtrl($scope){
+		function mainCtrl($scope, $location){
+
+
 			$scope.stream = 'leveluplive';
 			$scope.openStream = function(stream){
 				var new_win = gui.Window.open('stream/'+stream,{
@@ -11,10 +13,17 @@
 					  "frame": false,
 					  "toolbar": false,
 				      "height":     400,
-				      "width":      600
+				      "width":      600,
+					  "min_width":	230,
+					  "min_height":	185
+
 					});
 			}
-            $scope.selectGame = function(game){
+            $scope.gamesLink = function(){
+				window.console.log("go to games");
+            	$location.path("/games");
+            }
+			$scope.selectGame = function(game){
 				$scope.games = [];
 				window.console.log("game = "+game);
 				request({

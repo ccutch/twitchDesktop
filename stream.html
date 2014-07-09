@@ -1,39 +1,28 @@
-<!DOCTYPE HTML>
 
-<html ng-app>
-
-<head>
-  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-  	<script src="./stream.js"></script>
-
-
-	<link rel="stylesheet" href="./assets/global.css" />
-    <link rel="stylesheet" href="./assets/stream.css" />
-</head>
-
-<body ng-controller="streamCtrl" style="-webkit-app-region: drag;">
-
-    <ng-include src="'./partials/header.html'">
-    </ng-include>
-
-	<div class="videoArea">
-		<object type="application/x-shockwave-flash"
-				style="height: calc(100% - 2px);width: calc(100% - 2px);margin: 1px;"
-		        id="live_embed_player_flash"
-		        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{stream}}"
-		        bgcolor="#000000">
-		  <param  name="allowFullScreen"
-		          value="true" />
-		  <param  name="allowScriptAccess"
-		          value="always" />
-		  <param  name="allowNetworking"
-		          value="all" />
-		  <param  name="movie"
-		          value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-		  <param  name="flashvars"
-		          value="hostname=www.twitch.tv&channel={{stream}}&auto_play=true" />
-		</object>
-	</div>
-</body>
-
-</html>
+<header>
+	<svg class="svg-twitch half" height="32px" version="1.1" viewBox="0 0 94 32" width="94px" x="0px" y="0px">
+		<path clip-rule="evenodd" d="M88,5h-6V0h-9l-6,5h-5.5L59,7.5V5h-5V0H36v5H16l-5-5H0v22l5,5.25L14,32h6v-1.5l3,1.5h12l2-3l1,3h7v-3l3,3h8l0.5-3l2.5,3h10l3-3v3h4l3-3v3h7l7-6V10L88,5z M13,13H8v6h5v6H6l-4-4V2h6v5h5V13z M36,21.5L32.5,25H15V7h6v12h2V7h6v12h2V7h5V21.5z M44,25h-6V7h6V25z M44,5h-6V2h6V5z M57,13h-5v6h5v6h-7l-4-4V2h6v5h5V13z M72,13h-7v6h7v6h-9l-4-4V11l4-4h9V13z M91,25h-6V13h-5v12h-6V2h6v5h7l4,4V25z" fill-rule="evenodd"></path>
+	</svg>
+</header>
+<div class="controls" style="-webkit-app-region: no-drag;">
+   <button onclick="gui.Window.get().setAlwaysOnTop(!aot); aot = !aot;">^</button>
+   <button onclick="gui.Window.get().close()">X</button>
+</div>
+<div class="videoArea">
+	<object type="application/x-shockwave-flash"
+			style="height: calc(100% - 4px);width: calc(100% - 4px);margin: 2px;"
+	        id="live_embed_player_flash"
+	        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel={{stream}}"
+	        bgcolor="#000000">
+	  <param  name="allowFullScreen"
+	          value="true" />
+	  <param  name="allowScriptAccess"
+	          value="always" />
+	  <param  name="allowNetworking"
+	          value="all" />
+	  <param  name="movie"
+	          value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+	  <param  name="flashvars"
+	          value="hostname=www.twitch.tv&channel={{stream}}&auto_play=true" />
+	</object>
+</div>

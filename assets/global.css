@@ -1,38 +1,96 @@
 
-	header{
-		width: 100%;
-		height: 25px;
-		background: purple;
-		position: relative;
-		z-index:10;
-	}
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	overflow: hidden;
+}
 
 
-  	html{
-		position: relative;
-		height: 100%;
-		width: 100%;
-		padding: 0px;
-		overflow: hidden;
-	}
+body{
+	margin: 0px;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
 
 
-	body{
-		margin: 0px;
-		position: relative;
-		height: 100%;
-		width: 100%;
-		overflow: hidden;
+object{
+	z-index: 60;
+}
 
-	}
-	.controls{
-		background: green;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		width: 75px;
-		text-align: center;
-		z-index: 15;
-		height: 25px;
-	}
-	
+.hiding-header{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 100;
+}
+
+header{
+	-webkit-transition: top .4s;
+	width: 100%;
+	height: 60px;
+	background: rgba(0,0,0,0.05);
+	position: absolute;
+	z-index:10;
+}
+.controls{
+	-webkit-transition: top .4s;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 75px;
+	text-align: center;
+	z-index: 15;
+	height: 60px;
+}
+.controls button{
+	background: rgba(0,0,0,0);
+	border: 0px;
+	cursor: pointer;
+	margin: 0px;
+	margin-top: 5px;
+	height:25px;
+	text-align: middle;
+	font-weight: bold;
+}
+.controls button:hover, .controls button.active{
+	background: rgba(0,0,0,0.025);
+}
+.controls a{
+	color: #6441a5;
+	padding-bottom: 4px;
+	border-bottom: 2px solid #6441a5;
+	line-height: 30px;
+	text-align: bottom;
+	text-decoration: none;
+}
+.svg-twitch{
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.half{
+	height: 22px;
+	margin-top: 5px;
+	margin-left: 0px;
+}
+body header, body .controls{
+	top: -25px;
+}
+body:hover header, body:hover .controls{
+	top: 0px;
+}
+.alwaysDown{
+	top: 0px !important;
+
+}
+
